@@ -3,42 +3,42 @@
 
 from abc import ABC, abstractmethod
 
+
 class Human(ABC):
-  @abstractmethod
-  def draw(self) -> None:
-    pass
+    @abstractmethod
+    def draw(self) -> None:
+        pass
+
 
 class Tanaka(Human):
-  def draw(self) -> None:
-    print("😁")
+    def draw(self) -> None:
+        print("😁")
+
 
 class Yamada(Human):
-  def draw(self) -> None:
-    print("👶")
+    def draw(self) -> None:
+        print("👶")
+
 
 class Suzuki(Human):
-  def write(self) -> None:
-    print("こんにちは")
+    def write(self) -> None:
+        print("こんにちは")
+
 
 class AI:
-  def draw(self) -> None:
-    print("👽")
+    def draw(self) -> None:
+        print("👽")
+
 
 def run_draw(human: Human) -> None:
-  human.draw()
+    human.draw()
 
-yamada: Yamada = Yamada() # 正常
-tanaka: Tanaka = Tanaka() # 正常
 
-# 絵が描けないSuzukiはHumanではないので存在できない
-# suzuki: Suzuki = Suzuki() 
-
+tanaka: Tanaka = Tanaka()
+yamada: Yamada = Yamada()
+# suzuki: Suzuki = Suzuki()
 ai: AI = AI()
 
-run_draw(yamada)
 run_draw(tanaka)
-# Suzukiは存在しないのでエラー
-# run_draw(suzuki)
-
-# aiはHumanではないので、型チェックでエラー
-# run_draw(ai) 
+run_draw(yamada)
+# run_draw(ai)
