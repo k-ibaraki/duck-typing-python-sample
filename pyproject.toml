@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "duck-typing-python"
+version = "0.1.0"
+description = ""
+authors = ["k-ibaraki <ibaraki@ncdc.co.jp>"]
+readme = "README.md"
+packages = [{include = "duck_typing_python"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+mypy = "^0.991"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
