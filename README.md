@@ -1,5 +1,7 @@
 # duck-typing-python
 
+Pythonで、抽象化(ABC)とダックタイピング(Protocol)を試すサンプルです。
+
 ## install
 ```
 poetry install
